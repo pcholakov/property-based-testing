@@ -1,0 +1,35 @@
+plugins {
+    id 'java-library'
+}
+
+compileJava {
+    sourceCompatibility = '10'
+}
+
+dependencies {
+    implementation 'com.google.guava:guava:24.1-jre'
+
+    testCompile 'com.pholser:junit-quickcheck-core:0.7'
+    testCompile 'com.pholser:junit-quickcheck-generators:0.7'
+
+//    testCompile 'com.pholser:junit-quickcheck-core:0.8'
+//    testCompile 'com.pholser:junit-quickcheck-generators:0.8'
+
+    testCompile 'org.assertj:assertj-core:3.9.0'
+
+    testCompile 'org.slf4j:slf4j-api:1.8.0-beta2'
+
+    runtime 'org.slf4j:slf4j-simple:1.8.0-beta2'
+}
+
+repositories {
+    jcenter()
+}
+
+test {
+    // Enable std{out,err} pass-through so we can see the output of our tests
+    testLogging {
+        outputs.upToDateWhen { false }
+        showStandardStreams = true
+    }
+}
