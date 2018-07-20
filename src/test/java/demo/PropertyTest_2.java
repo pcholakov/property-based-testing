@@ -36,6 +36,12 @@ public class PropertyTest_2 {
         }
     }
 
+    /**
+     * Checks that every third element is the literal
+     * <code>"Fizz"</code>.
+     *
+     * @param sequence valid FizzBuzz sequence
+     */
     @Property
     public void fizzes(@From(PropertyTest_2.FizzBuzzGenerator.class) List<String> sequence) {
         for (int i = 3; i <= sequence.size(); i += 3) {

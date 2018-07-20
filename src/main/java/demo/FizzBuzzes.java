@@ -13,6 +13,12 @@ class FizzBuzzes {
     private FizzBuzzes() {
     }
 
+    /**
+     * @param length desired size of sequence
+     * @return a FizzBuzz sequence with specified size starting from 1, e.g. for {@code length} == 15:
+     * <code>["1", "2", "Fizz", "4", "Buzz", "Fizz", "7", "8", "Fizz", "Buzz", "11", "Fizz", "13", "14",
+     * "FizzBuzz"]</code>
+     */
     static List<String> fizzBuzz(int length) {
         return fizzBuzz().limit(length).collect(Collectors.toList());
     }

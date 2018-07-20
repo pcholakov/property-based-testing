@@ -4,6 +4,7 @@ import com.google.common.collect.Lists;
 import com.pholser.junit.quickcheck.Property;
 import com.pholser.junit.quickcheck.generator.InRange;
 import com.pholser.junit.quickcheck.runner.JUnitQuickcheck;
+import org.junit.Ignore;
 import org.junit.runner.RunWith;
 
 import java.util.List;
@@ -11,6 +12,7 @@ import java.util.List;
 import static org.assertj.core.api.Assertions.assertThat;
 
 @RunWith(JUnitQuickcheck.class)
+@Ignore
 public class Strategies {
 
     @Property
